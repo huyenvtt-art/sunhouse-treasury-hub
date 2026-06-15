@@ -1,0 +1,38 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-navy-900: #0a1628;
+  --color-navy-800: #0f1f3d;
+  --color-navy-700: #1b2a4a;
+  --color-navy-600: #243656;
+  --color-electric-500: #0066ff;
+  --color-electric-400: #3388ff;
+  --color-electric-300: #66aaff;
+  --color-electric-200: #99ccff;
+  --font-sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply m-0 bg-slate-50 text-navy-900;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+}
+
+/* React Flow overrides */
+.react-flow__node {
+  font-family: var(--font-sans);
+}
+
+.react-flow__attribution {
+  display: none;
+}
